@@ -54,7 +54,7 @@ def generate_serial_letters_with_count(template_path: str, excel_path: str, outp
 
     for _, row in df.iterrows():
         data = {f"{{{col}}}": val for col, val in row.items()}
-        output_path = os.path.join(output_dir, f"{row['Name']}_letter.docx")
+        output_path = os.path.join(output_dir, f"{row['Firstname']}_letter.docx")
         create_personalized_letter(template_path, data, output_path)
         print(f"Created: {output_path}")
 
